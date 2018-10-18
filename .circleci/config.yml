@@ -1,0 +1,62 @@
+workspace_root: &workspace_root ~/product-suite
+
+attach_workspace: &attach_workspace
+  attach_workspace:
+    at: *workspace_root
+
+defaults: &defaults
+  working_directory: *workspace_root
+  docker:
+    - image: circleci/node:10
+
+version: 2
+
+jobs:
+  install:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - dependencies-{{ .Branch }}
+            - dependencies-master
+      - run: npm install
+      - run: npm run bootstrap
+      - save_cache:
+          key: dependencies-{{ .Branch }}
+          paths:
+            - node_modules
+            - applications/profile-app/node_modules
+      - persist_to_workspace:
+          root: *workspace_root
+          paths:
+            - .
+  lint_changes:
+    <<: *defaults
+    steps:
+      - *attach_workspace
+      - run: npm run lint:changes
+  test_changes:
+    <<: *defaults
+    steps:
+      - *attach_workspace
+      - run: npm run test:changes
+  build_changes:
+    <<: *defaults
+    steps:
+      - *attach_workspace
+      - run: npm run build:changes
+workflows:
+  version: 2
+  build-test-and-deploy:
+    jobs:
+      - install
+      - lint_changes:
+          requires:
+            - install
+      - test_changes:
+          requires:
+            - install
+      - build_changes:
+          requires:
+            - install
