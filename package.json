@@ -24,7 +24,7 @@
     "husky": "^1.1.2",
     "lerna": "3.4.3",
     "prettier": "1.14.3",
-    "semantic-release": "^15.10.3",
+    "semantic-release": "15.9.0",
     "semantic-release-monorepo": "^6.1.1"
   }
 }
