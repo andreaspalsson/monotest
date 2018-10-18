@@ -1,0 +1,29 @@
+{
+  "name": "package2",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "Andreas Pålsson <andreas.palsson@acast.com>",
+  "homepage": "https://github.com/andreaspalsson/monotest#readme",
+  "license": "ISC",
+  "main": "lib/package2.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreaspalsson/monotest.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/andreaspalsson/monotest/issues"
+  },
+  "dependencies": {
+    "package3": "^1.0.0"
+  }
+}

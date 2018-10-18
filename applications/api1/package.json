@@ -1,0 +1,30 @@
+{
+  "name": "api1",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "Andreas Pålsson <andreas.palsson@acast.com>",
+  "homepage": "https://github.com/andreaspalsson/monotest#readme",
+  "license": "ISC",
+  "main": "src/api1.js",
+  "directories": {
+    "lib": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreaspalsson/monotest.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/andreaspalsson/monotest/issues"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "package3": "^1.0.0"
+  }
+}
