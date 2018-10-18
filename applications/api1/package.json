@@ -19,7 +19,7 @@
     "url": "git+https://github.com/andreaspalsson/monotest.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1",
+    "test": "echo \"Error: run tests from root\" && exit 0",
     "release": "npx semantic-release -e semantic-release-monorepo"
   },
   "bugs": {

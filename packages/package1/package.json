@@ -23,7 +23,7 @@
   },
   "scripts": {
     "build": "echo \"Build package 1\"",
-    "test": "echo \"Error: run tests from root\" && exit 1",
+    "test": "echo \"Error: run tests from root\" && exit 0",
     "release": "npx semantic-release -e semantic-release-monorepo"
   },
   "bugs": {
