@@ -8,7 +8,7 @@
     "build:changes": "lerna run build --since origin/master --parallel",
     "lint": "eslint applications --max-warnings=0",
     "test": "lerna exec -- npm test",
-    "release": "lerna run release --since"
+    "release": "lerna run release --concurrency 1 --since"
   },
   "husky": {
     "hooks": {
