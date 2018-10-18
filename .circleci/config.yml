@@ -46,6 +46,11 @@ jobs:
     steps:
       - *attach_workspace
       - run: npm run build:changes
+  release:
+    <<: *defaults
+    steps:
+      - *attach_workspace
+      - run: npm run release
 workflows:
   version: 2
   build-test-and-deploy:
@@ -60,3 +65,11 @@ workflows:
       - build_changes:
           requires:
             - install
+      - release:
+          requires:
+            - lint_changes
+            - test_changes
+            - build_changes
+          filters:
+            branches:
+              only: master
