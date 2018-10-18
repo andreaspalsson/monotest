@@ -5,6 +5,7 @@
   "author": "Andreas Pålsson <andreas.palsson@acast.com>",
   "homepage": "https://github.com/andreaspalsson/monotest#readme",
   "license": "ISC",
+  "private": true,
   "main": "src/api1.js",
   "directories": {
     "lib": "src",
@@ -18,13 +19,14 @@
     "url": "git+https://github.com/andreaspalsson/monotest.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "echo \"Error: run tests from root\" && exit 0",
+    "release": "npx semantic-release -e semantic-release-monorepo"
   },
   "bugs": {
     "url": "https://github.com/andreaspalsson/monotest/issues"
   },
   "dependencies": {
     "express": "^4.16.4",
-    "package3": "^1.0.0"
+    "@andreas.palsson/package3": "^1.0.0"
   }
 }

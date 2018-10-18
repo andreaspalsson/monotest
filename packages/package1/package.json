@@ -1,11 +1,15 @@
 {
-  "name": "package1",
+  "name": "@andreas.palsson/package1",
   "version": "1.0.0",
   "description": "> TODO: description",
   "author": "Andreas Pålsson <andreas.palsson@acast.com>",
   "homepage": "https://github.com/andreaspalsson/monotest#readme",
   "license": "ISC",
+  "public": true,
   "main": "lib/package1.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -18,7 +22,9 @@
     "url": "git+https://github.com/andreaspalsson/monotest.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "build": "echo \"Build package 1\"",
+    "test": "echo \"Error: run tests from root\" && exit 0",
+    "release": "npx semantic-release -e semantic-release-monorepo"
   },
   "bugs": {
     "url": "https://github.com/andreaspalsson/monotest/issues"

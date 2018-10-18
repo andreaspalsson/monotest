@@ -3,5 +3,5 @@
 module.exports = package3;
 
 function package3() {
-    // TODO
+    return 'package3';
 }
