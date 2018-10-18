@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "package2": "^1.0.0",
+    "@andreas.palsson/package2": "^1.0.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.5"
@@ -12,7 +12,8 @@
     "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "release": "npx semantic-release -e semantic-release-monorepo"
   },
   "eslintConfig": {
     "extends": "react-app"

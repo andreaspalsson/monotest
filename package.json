@@ -7,12 +7,16 @@
     "test:changes": "lerna run test --since origin/master --parallel",
     "build:changes": "lerna run build --since origin/master --parallel",
     "lint": "eslint applications --max-warnings=0",
-    "test": "lerna exec -- npm test"
+    "test": "lerna exec -- npm test",
+    "release": "lerna run release --since"
   },
   "devDependencies": {
+    "babel-eslint": "9.0.0",
     "eslint": "5.6.0",
     "eslint-config-acast": "1.2.1",
     "lerna": "3.4.3",
-    "prettier": "1.14.3"
+    "prettier": "1.14.3",
+    "semantic-release": "^15.10.3",
+    "semantic-release-monorepo": "^6.1.1"
   }
 }
