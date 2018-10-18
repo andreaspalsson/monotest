@@ -10,10 +10,18 @@
     "test": "lerna exec -- npm test",
     "release": "lerna run release --since"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "devDependencies": {
+    "@commitlint/cli": "^7.2.1",
+    "@commitlint/config-conventional": "^7.1.2",
     "babel-eslint": "9.0.0",
     "eslint": "5.6.0",
     "eslint-config-acast": "1.2.1",
+    "husky": "^1.1.2",
     "lerna": "3.4.3",
     "prettier": "1.14.3",
     "semantic-release": "^15.10.3",
