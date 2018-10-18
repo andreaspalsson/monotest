@@ -26,7 +26,12 @@ jobs:
           key: dependencies-{{ .Branch }}
           paths:
             - node_modules
-            - applications/profile-app/node_modules
+            - applications/app1/node_modules
+            - applications/app2/node_modules
+            - applications/api1/node_modules
+            - packages/package1/node_modules
+            - packages/package2/node_modules
+            - packages/package3/node_modules
       - persist_to_workspace:
           root: *workspace_root
           paths:
