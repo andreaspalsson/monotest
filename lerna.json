@@ -3,5 +3,10 @@
     "applications/*",
     "packages/*"
   ],
-  "version": "independent"
+  "version": "independent",
+  "command": {
+    "publish": {
+      "allowBranch": "master"
+    }
+  }
 }
