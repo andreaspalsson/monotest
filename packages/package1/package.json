@@ -5,7 +5,6 @@
   "author": "Andreas Pålsson <andreas.palsson@acast.com>",
   "homepage": "https://github.com/andreaspalsson/monotest#readme",
   "license": "ISC",
-  "public": true,
   "main": "lib/package1.js",
   "publishConfig": {
     "access": "public"
