@@ -1,11 +1,11 @@
 {
   "name": "@andreas.palsson/package2",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "> TODO: description",
   "author": "Andreas Pålsson <andreas.palsson@acast.com>",
   "homepage": "https://github.com/andreaspalsson/monotest#readme",
   "license": "ISC",
-  "main": "lib/package2.js",  
+  "main": "lib/package2.js",
   "publishConfig": {
     "access": "public"
   },
@@ -28,6 +28,6 @@
     "url": "https://github.com/andreaspalsson/monotest/issues"
   },
   "dependencies": {
-    "@andreas.palsson/package3": "^1.0.0"
+    "@andreas.palsson/package3": "1.1.0"
   }
 }
