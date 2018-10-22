@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/andreaspalsson/monotest/compare/@andreas.palsson/package1@1.1.0...@andreas.palsson/package1@1.1.1) (2018-10-22)
+
+
+### Bug Fixes
+
+* **package1:** Small fix ([28742d1](https://github.com/andreaspalsson/monotest/commit/28742d1))
+
+
+
+
+
 # 1.1.0 (2018-10-22)
 
 
