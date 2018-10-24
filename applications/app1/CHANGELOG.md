@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.6](https://github.com/andreaspalsson/monotest/compare/app1@0.2.5...app1@0.2.6) (2018-10-24)
+
+
+### Bug Fixes
+
+* **app1:** Update headline ([f314b19](https://github.com/andreaspalsson/monotest/commit/f314b19))
+
+
+
+
+
 ## [0.2.5](https://github.com/andreaspalsson/monotest/compare/app1@0.2.4...app1@0.2.5) (2018-10-24)
 
 **Note:** Version bump only for package app1
