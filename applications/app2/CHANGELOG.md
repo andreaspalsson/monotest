@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.3](https://github.com/andreaspalsson/monotest/compare/app2@0.2.2...app2@0.2.3) (2018-10-24)
+
+**Note:** Version bump only for package app2
+
+
+
+
+
 ## [0.2.2](https://github.com/andreaspalsson/monotest/compare/app2@0.2.1...app2@0.2.2) (2018-10-24)
 
 **Note:** Version bump only for package app2
