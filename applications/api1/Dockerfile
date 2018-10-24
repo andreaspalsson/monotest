@@ -14,6 +14,7 @@ RUN pm2 install pm2-logrotate
 # Install app
 COPY .npmrc /var/www/app
 COPY . /var/www/app
+RUN ls
 RUN npm install --only=production
 
 CMD ["npm", "run", "start"]

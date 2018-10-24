@@ -63,12 +63,7 @@ jobs:
       - run: git config user.email "test@example.com"
       - run: git config user.name "CircleCi"
       - run: npm set registry https://npm-proxy.fury.io/andreaspalsson/
-      - run: npm config ls
       - run: npm run publish
-  docker:
-    <<: *defaults
-    steps:
-      - *attach_workspace
       - setup_remote_docker
       - run:
           name: "Build and upload docker images to DockerHub"
@@ -85,10 +80,7 @@ workflows:
   version: 2
   build-test-and-deploy:
     jobs:
-      - install:
-          filters:
-            tags:
-              only: /.*/
+      - install
       - lint_changes:
           requires:
             - install
@@ -113,11 +105,3 @@ workflows:
           filters:
             branches:
               only: master
-      - docker:
-          requires:
-            - install
-          filters:
-            branches:
-              ignore: /.*/
-            tags:
-              only: /.*?@\d{1,}\.\d{1,}\.\d{1,}/
