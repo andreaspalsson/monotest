@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.8](https://github.com/andreaspalsson/monotest/compare/api1@1.1.7...api1@1.1.8) (2018-10-24)
+
+
+### Bug Fixes
+
+* **api:** Add some logic ([60a7af9](https://github.com/andreaspalsson/monotest/commit/60a7af9))
+
+
+
+
+
 ## [1.1.7](https://github.com/andreaspalsson/monotest/compare/api1@1.1.6...api1@1.1.7) (2018-10-24)
 
 **Note:** Version bump only for package api1
