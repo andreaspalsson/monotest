@@ -1,7 +1,8 @@
 # Stage 1 - the build process
 FROM node:10 as build-deps
 WORKDIR /usr/src/app
-COPY package.json package-lock.lock ./
+COPY .npmrc package.json package-lock.json ./
+#COPY package-lock.json ./
 RUN npm install
 COPY . ./
 RUN npm run build
