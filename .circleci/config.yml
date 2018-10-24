@@ -116,4 +116,4 @@ workflows:
             branches:
               ignore: /.*/
             tags:
-              only: /\w@\d{1,}\.\d{1,}\.\d{1,}/
+              only: /(.*)@(\d{1,}\.\d{1,}\.\d{1,})/
