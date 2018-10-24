@@ -51,10 +51,27 @@ jobs:
     steps:
       - *attach_workspace
       - run: npm run build:changes
+  ci_install:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - dependencies-{{ .Branch }}
+            - dependencies-master
+      - run: npm install
+      - run: npm run bootstrap
+      - persist_to_workspace:
+          root: *workspace_root
+          paths:
+            - .
   publish:
     <<: *defaults
     steps:
       - *attach_workspace
+      - run: npm run lint:release
+      - run: npm run test:release
+      - run: npm run build:release
       - run: git status
       - run: git diff
       - run: 
@@ -93,9 +110,7 @@ workflows:
             - install
       - publish:
           requires:
-            - lint_changes
-            - test_changes
-            - build_changes
+            - ci_install
           filters:
             branches:
               only: master
