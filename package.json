@@ -9,7 +9,7 @@
     "lint": "eslint applications --max-warnings=0",
     "test": "lerna exec -- npm test",
     "release": "lerna publish --conventional-commits --exact --yes",
-    "publish": "lerna publish --conventional-commits --exact --yes"
+    "publish": "lerna publish --conventional-commits --exact --yes --no-verify-registry"
   },
   "husky": {
     "hooks": {
