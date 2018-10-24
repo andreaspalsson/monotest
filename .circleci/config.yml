@@ -85,7 +85,10 @@ workflows:
   version: 2
   build-test-and-deploy:
     jobs:
-      - install
+      - install:
+          filters:
+            tags:
+              only: /.*/
       - lint_changes:
           requires:
             - install
