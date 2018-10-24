@@ -72,8 +72,8 @@ jobs:
       - run: npm run lint:release
       - run: npm run test:release
       - run: npm run build:release
-      - run: git status
-      - run: git diff
+      - run: git config user.email "test@example.com"
+      - run: git config user.name "CircleCi"
       - run: 
           command: |
             mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
