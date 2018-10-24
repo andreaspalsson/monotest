@@ -7,7 +7,7 @@
   "command": {
     "publish": {
       "allowBranch": "master",
-      "message": "chore(release): Publish and update packages"
+      "message": "ci(release): Publish and update packages"
     }
   }
 }
