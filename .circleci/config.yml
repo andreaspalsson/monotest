@@ -51,6 +51,19 @@ jobs:
     steps:
       - *attach_workspace
       - run: npm run build:changes
+  publish:
+    <<: *defaults
+    steps:
+      - *attach_workspace
+      - run: npm run publish
+  docker:
+    <<: *defaults
+    steps:
+      - *attach_workspace
+      - setup_remote_docker
+      - run:
+          name: "Build and upload docker images to DockerHub"
+          command: ./.circleci/buildDocker.sh
   release:
     <<: *defaults
     steps:
@@ -73,7 +86,7 @@ workflows:
       - build_changes:
           requires:
             - install
-      - release:
+      - publish:
           requires:
             - lint_changes
             - test_changes
@@ -81,7 +94,7 @@ workflows:
           filters:
             branches:
               only: master
-      - deploy_production:
+      - docker:
           requires:
             - lint_changes
             - test_changes
