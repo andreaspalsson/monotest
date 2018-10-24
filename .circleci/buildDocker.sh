@@ -16,9 +16,7 @@ if [ -d "$DIRECTORY" ]; then
   # Control will enter here if $DIRECTORY exists.
   cd $DIRECTORY
   pwd
-  if [ npm run | grep -q build ]; then
-    npm run build
-  fi
+  npm run build --if-present
   docker build -t palsson/monotest:prod-$CIRCLE_TAG .
   docker tag $(docker images -q palsson/monotest:prod-$CIRCLE_TAG) palsson/monotest:$APP_NAME@dev
   docker tag $(docker images -q palsson/monotest:prod-$CIRCLE_TAG) palsson/monotest:$APP_NAME@latest
