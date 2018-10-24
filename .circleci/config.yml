@@ -51,20 +51,6 @@ jobs:
     steps:
       - *attach_workspace
       - run: npm run build:changes
-  ci_install:
-    <<: *defaults
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - dependencies-{{ .Branch }}
-            - dependencies-master
-      - run: npm install
-      - run: npm run bootstrap
-      - persist_to_workspace:
-          root: *workspace_root
-          paths:
-            - .
   publish:
     <<: *defaults
     steps:
@@ -78,9 +64,6 @@ jobs:
       - run: echo $CIRCLE_REPOSITORY_URL
       - run: git config user.email "test@example.com"
       - run: git config user.name "CircleCi"
-      - run: 
-          command: |
-            mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
       - run: npm run publish
   docker:
     <<: *defaults
@@ -102,10 +85,7 @@ workflows:
   version: 2
   build-test-and-deploy:
     jobs:
-      - install:
-          filters:
-            branches:
-              ignore: master
+      - install
       - lint_changes:
           requires:
             - install
@@ -124,13 +104,9 @@ workflows:
           filters:
             branches:
               ignore: master
-      - ci_install:
-          filters:
-            branches:
-              only: master
       - publish:
           requires:
-            - ci_install
+            - install
           filters:
             branches:
               only: master
