@@ -20,7 +20,7 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 0",
-    "release": "npx semantic-release -e semantic-release-monorepo"
+    "start": "node src/ap1.js"
   },
   "bugs": {
     "url": "https://github.com/andreaspalsson/monotest/issues"
