@@ -59,13 +59,10 @@ jobs:
           fingerprints:
             - "98:77:18:01:dd:5b:ae:f6:ce:89:ba:da:73:e8:7a:a1"
       - run: ssh-keyscan github.com >> ~/.ssh/known_hosts
-      - run: npm run lint:release
       - run: npm run test:release
-      - run: npm run build:release
-      - run: echo $CIRCLE_REPOSITORY_URL
       - run: git config user.email "test@example.com"
       - run: git config user.name "CircleCi"
-      - run: npm set registry https://npm.fury.io/andreaspalsson/ 
+      - run: npm set registry https://npm-proxy.fury.io/Ah9Bfosv2GF1a8HKurRb/andreaspalsson/
       - run: npm config ls
       - run: npm run publish
   docker:
