@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/andreaspalsson/monotest/compare/@andreas.palsson/package3@1.1.5...@andreas.palsson/package3@1.2.0) (2018-10-24)
+
+
+### Features
+
+* **packag3:** New feat ([ac7dc6f](https://github.com/andreaspalsson/monotest/commit/ac7dc6f))
+
+
+
+
+
 ## [1.1.5](https://github.com/andreaspalsson/monotest/compare/@andreas.palsson/package3@1.1.4...@andreas.palsson/package3@1.1.5) (2018-10-24)
 
 
