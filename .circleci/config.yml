@@ -1,4 +1,4 @@
-workspace_root: &workspace_root ~/product-suite
+workspace_root: &workspace_root ~/monotest
 
 attach_workspace: &attach_workspace
   attach_workspace:
@@ -55,7 +55,7 @@ jobs:
     <<: *defaults
     steps:
       - *attach_workspace
-      - run: git st
+      - run: git status
       - run: 
           command: |
             mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
