@@ -58,6 +58,7 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "98:77:18:01:dd:5b:ae:f6:ce:89:ba:da:73:e8:7a:a1"
+      - run: ssh-keyscan github.com >> ~/.ssh/known_hosts
       - run: npm run lint:release
       - run: npm run test:release
       - run: npm run build:release
