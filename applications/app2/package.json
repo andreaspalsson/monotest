@@ -1,6 +1,6 @@
 {
   "name": "app2",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "private": true,
   "dependencies": {
     "@andreas.palsson/package2": "1.1.8",
