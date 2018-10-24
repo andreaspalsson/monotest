@@ -8,7 +8,9 @@
     "build:changes": "lerna run build --since origin/master --parallel",
     "lint": "eslint applications --max-warnings=0",
     "test": "lerna exec -- npm test",
-    "release": "lerna publish --conventional-commits --exact"
+    "release": "lerna publish --conventional-commits --exact --yes",
+    "publish": "lerna publish --conventional-commits --exact --yes --registry https://npm-proxy.fury.io/Ah9Bfosv2GF1a8HKurRb/andreaspalsson/"
+
   },
   "husky": {
     "hooks": {

@@ -81,3 +81,13 @@ workflows:
           filters:
             branches:
               only: master
+      - deploy_production:
+          requires:
+            - lint_changes
+            - test_changes
+            - build_changes
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /\w@\d{1,}\.\d{1,}\.\d{1,}/
