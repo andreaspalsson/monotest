@@ -3,5 +3,5 @@
 module.exports = package3;
 
 function package3() {
-    return 'package3 0.1.0';
+    return 'package3 0.1.1';
 }
