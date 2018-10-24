@@ -72,6 +72,7 @@ jobs:
       - run: npm run lint:release
       - run: npm run test:release
       - run: npm run build:release
+      - run: echo $CIRCLE_REPOSITORY_URL
       - run: git config user.email "test@example.com"
       - run: git config user.name "CircleCi"
       - run: 
@@ -98,17 +99,32 @@ workflows:
   version: 2
   build-test-and-deploy:
     jobs:
-      - install
+      - install:
+          filters:
+            branches:
+              ignore: master
       - lint_changes:
           requires:
             - install
+          filters:
+            branches:
+              ignore: master
       - test_changes:
           requires:
             - install
+          filters:
+            branches:
+              ignore: master
       - build_changes:
           requires:
             - install
-      - ci_install
+          filters:
+            branches:
+              ignore: master
+      - ci_install:
+          filters:
+            branches:
+              only: master
       - publish:
           requires:
             - ci_install
@@ -116,10 +132,6 @@ workflows:
             branches:
               only: master
       - docker:
-          requires:
-            - lint_changes
-            - test_changes
-            - build_changes
           filters:
             branches:
               ignore: /.*/
