@@ -108,6 +108,7 @@ workflows:
       - build_changes:
           requires:
             - install
+      - ci_install
       - publish:
           requires:
             - ci_install
