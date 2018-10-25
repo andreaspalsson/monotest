@@ -62,8 +62,8 @@ jobs:
       - run: npm run test:release
       - run: git config user.email "test@example.com"
       - run: git config user.name "CircleCi"
-      - run: npm set registry https://npm-proxy.fury.io/andreaspalsson/
       - run: echo "//npm-proxy.fury.io/andreaspalsson/:_authToken=$GEMFURY_TOKEN" > ~/.npmrc
+      - run: npm set registry https://npm-proxy.fury.io/andreaspalsson/
       - run: npm run publish
       - setup_remote_docker
       - run:
