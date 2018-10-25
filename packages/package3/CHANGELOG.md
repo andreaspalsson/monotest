@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.3](https://github.com/andreaspalsson/monotest/compare/@andreas.palsson/package3@1.2.2...@andreas.palsson/package3@1.2.3) (2018-10-24)
+
+**Note:** Version bump only for package @andreas.palsson/package3
+
+
+
+
+
 ## [1.2.2](https://github.com/andreaspalsson/monotest/compare/@andreas.palsson/package3@1.2.1...@andreas.palsson/package3@1.2.2) (2018-10-24)
 
 
