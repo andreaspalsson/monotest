@@ -1,9 +1,9 @@
 {
   "name": "app2",
-  "version": "0.2.12",
+  "version": "0.2.13",
   "private": true,
   "dependencies": {
-    "@andreas.palsson/package2": "1.1.10",
+    "@andreas.palsson/package2": "1.1.11",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.5"
